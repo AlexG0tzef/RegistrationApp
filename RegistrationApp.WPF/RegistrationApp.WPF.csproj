@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RegistrationApp.Domain\RegistrationApp.Domain.csproj" />
+    <ProjectReference Include="..\RegistrationApp.EF\RegistrationApp.EF.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="MVVM\Models\" />
+    <Folder Include="MVVM\Views\" />
+  </ItemGroup>
+
+</Project>
