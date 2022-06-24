@@ -1,0 +1,11 @@
+﻿<UserControl x:Class="RegistrationApp.WPF.MVVM.Views.CallCenterOperatorViewControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:RegistrationApp.WPF.MVVM.Views"
+             mc:Ignorable="d">
+    <Grid >
+        <TextBlock Foreground="White" HorizontalAlignment="Center" FontSize="30" Text="Оператор колл-центра"/>
+    </Grid>
+</UserControl>

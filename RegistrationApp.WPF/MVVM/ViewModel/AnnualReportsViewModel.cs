@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace RegistrationApp.WPF.MVVM.ViewModel
 {
-    public class GuidViewModel : BaseViewModel
+    public class AnnualReportsViewModel : BaseViewModel
     {
-
     }
 }

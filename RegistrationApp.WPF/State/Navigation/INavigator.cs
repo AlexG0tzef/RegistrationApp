@@ -8,9 +8,22 @@ using System.Windows.Input;
 
 namespace RegistrationApp.WPF.State.Navigation
 {
+    public enum ViewType
+    {
+        Guid,
+        Registration,
+        AnnualReports,
+        CallCenter,
+        Correspondence,
+        Downloads,
+        Guides,
+        LogBook,
+        Stats,
+        Reports
+    }
     public interface INavigator
     {
-        BaseViewModel CurrentViewModal { get; set; }
-        ICommand UpdateCurrentViewModalCommand { get; }
+        BaseViewModel CurrentViewModel { get; set; }
+        ICommand UpdateCurrentViewModelCommand { get; }
     }
 }

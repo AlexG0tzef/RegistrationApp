@@ -6,10 +6,11 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RegistrationApp.WPF.MVVM.ViewModel
+namespace RegistrationApp.WPF.MVVM.Models
 {
-    public class BaseViewModel : INotifyPropertyChanged
+    public class ObservableObject : INotifyPropertyChanged
     {
+
         #region INotifyPropertyChanged
         protected void OnPropertyChanged(string prop)
         {

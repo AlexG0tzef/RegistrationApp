@@ -4,10 +4,11 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:RegistrationApp.WPF.Controls"
+             xmlns:nav="clr-namespace:RegistrationApp.WPF.State.Navigation"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <Grid Width="170" HorizontalAlignment="Left" Background="{StaticResource BrushePrimary1}">
+        <Grid Width="170" HorizontalAlignment="Left" Background="{StaticResource BrushePrimary2}">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
@@ -20,16 +21,19 @@
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <RadioButton Grid.Row="0" Content="Оператор колл-центра"/>
-            <RadioButton Grid.Row="1" Content="Регистрация"/>
-            <RadioButton Grid.Row="2" Content="Журнал регистрации"/>
-            <RadioButton Grid.Row="3" Content="Переписка"/>
-            <RadioButton Grid.Row="4" Content="Годовые отчеты"/>
-            <RadioButton Grid.Row="5" Content="Справочники"/>
-            <RadioButton Grid.Row="6" Content="Руководство"/>
-            <RadioButton Grid.Row="7" Content="Статистика"/>
-            <RadioButton Grid.Row="8" Content="Загрузки"/>
-            <RadioButton Grid.Row="9" Content="Отчетность"/>
+            <Grid.Resources>
+                <Style TargetType="RadioButton" BasedOn="{StaticResource NavButton}"/>
+            </Grid.Resources>
+            <RadioButton Grid.Row="0" IsChecked="True" Content="Оператор колл-центра" Command="{Binding UpdateCurrentViewModelCommand}" CommandParameter="{x:Static nav:ViewType.CallCenter}"/>
+            <RadioButton Grid.Row="1" Content="Регистрация" Command="{Binding UpdateCurrentViewModelCommand}" CommandParameter="{x:Static nav:ViewType.Registration}"/>
+            <RadioButton Grid.Row="2" Content="Журнал регистрации" Command="{Binding UpdateCurrentViewModelCommand}" CommandParameter="{x:Static nav:ViewType.LogBook}"/>
+            <RadioButton Grid.Row="3" Content="Переписка" Command="{Binding UpdateCurrentViewModelCommand}" CommandParameter="{x:Static nav:ViewType.Correspondence}"/>
+            <RadioButton Grid.Row="4" Content="Годовые отчеты" Command="{Binding UpdateCurrentViewModelCommand}" CommandParameter="{x:Static nav:ViewType.AnnualReports}"/>
+            <RadioButton Grid.Row="5" Content="Справочники" Command="{Binding UpdateCurrentViewModelCommand}" CommandParameter="{x:Static nav:ViewType.Guides}"/>
+            <RadioButton Grid.Row="6" Content="Руководства" Command="{Binding UpdateCurrentViewModelCommand}" CommandParameter="{x:Static nav:ViewType.Guid}"/>
+            <RadioButton Grid.Row="7" Content="Статистика" Command="{Binding UpdateCurrentViewModelCommand}" CommandParameter="{x:Static nav:ViewType.Stats}"/>
+            <RadioButton Grid.Row="8" Content="Загрузки" Command="{Binding UpdateCurrentViewModelCommand}" CommandParameter="{x:Static nav:ViewType.Downloads}"/>
+            <RadioButton Grid.Row="9" Content="Отчётность" Command="{Binding UpdateCurrentViewModelCommand}" CommandParameter="{x:Static nav:ViewType.Reports}"/>
         </Grid>      
     </Grid>
 </UserControl>
